@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /opt/thepeak-spotify
+    command: ["python", "spotify_playlist.py"]
+    env_file:
+      - .env
