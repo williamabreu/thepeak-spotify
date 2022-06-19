@@ -8,7 +8,7 @@ RUN echo "America/Vancouver" > /etc/timezone
 
 # Install dependencies.
 COPY ./requirements.txt /opt/thepeak-spotify
-RUN pip install -r requirements.txt
+RUN pip --disable-pip-version-check install -r requirements.txt
 COPY ./tests /opt/thepeak-spotify
 
 # Env.
